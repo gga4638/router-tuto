@@ -1,21 +1,32 @@
 import './App.css';
 import Home from './Home';
 import About from './About';
-import { Outlet, Route, Routes, useParams } from 'react-router-dom';
+import { Link, Outlet, Route, Routes, useParams } from 'react-router-dom';
 import GlobalNav from './GlobalNav';
 
 function App() {
 
   return (
     <div>
-      <Routes>
+      <h1>BookKeeper</h1>
+      <nav 
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem"
+        }}
+      >
+        <Link to="/invoices">Invoices</Link> |{" "}
+        <Link to="/expenses">Expenses</Link> |{" "}
+      </nav>
+      <Outlet />
+      {/* <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="invoices" element={<Invoices />} />
+          <Route path="hello" element={<Hello />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="activity" element={<Activity />} />
           <Route path="*" element={<NotFound />} />
         </Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
@@ -32,8 +43,8 @@ function Layout() {
   );
 }
 
-function Invoices() {
-  return <h1>Invoices</h1>;
+function Hello() {
+  return <h1>Hello Router</h1>;
 }
 
 function Dashboard() {

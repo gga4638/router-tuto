@@ -6,7 +6,7 @@ function GlobalNav() {
         <>
             <nav>
                 <Link to="/dashboard">Dashboard</Link> |{" "}
-                <Link to="expenses">Invoices</Link> |{" "}
+                <Link to="hello">Hello</Link> |{" "}
                 <Link to="dashboard">Dashboard</Link> |{" "}
                 <Link to="activity">Activity</Link> |{" "}
             </nav> 
